@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: kscience.plotlykt:plotlykt-server:0.3.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/kscience.plotlykt/plotlykt-server/0.3.0/30264e117ab0804efd21ab17bc0ed8455f68fc54/plotlykt-server-0.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/kscience.plotlykt/plotlykt-server/0.3.0/c2dd5e7e81f7f737eb4daf360d8945a28445e34a/plotlykt-server-0.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

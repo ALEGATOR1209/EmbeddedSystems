@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: hep.dataforge:dataforge-context-jvm:0.2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/hep.dataforge/dataforge-context-jvm/0.2.0/efbf8f02571638b211b2bf00bc10ca450eb4e3da/dataforge-context-jvm-0.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/hep.dataforge/dataforge-context-jvm/0.2.0/c50f235fada66ead1d1a45a66570c1d47d598a39/dataforge-context-jvm-0.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
