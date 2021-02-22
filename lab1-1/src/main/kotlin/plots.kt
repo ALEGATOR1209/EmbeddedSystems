@@ -25,15 +25,15 @@ fun plotSignal(n: Int, wMax: Int, num: Int) {
 fun benchmark(
     nMin: Int,
     nMax: Int,
-    nStep: Int,
     wMax: Int,
     numMin: Int,
     numMax: Int,
+    numStep: Int = 0,
     out: String? = null
 ) {
-    val nTotal = (nMax - nMin) / nStep
-    val numStep = (numMax - numMin) / nTotal
-    val list = List(nTotal) { i ->
+    val numTotal = 1 + (numMax - numMin) / numStep
+    val nStep = (nMax - nMin) / numTotal
+    val list = List(numTotal) { i ->
         GlobalScope.async {
             val n = nMin + i * nStep
             val num = numMin + i * numStep
@@ -45,7 +45,7 @@ fun benchmark(
 
     runBlocking {
         val time = list.awaitAll()
-        plot(time.indices.mapIndexed { i, _ -> nMin + i * nStep }, time, "n", "msec")
+        plot(time.indices.mapIndexed { i, _ -> numMin + i * numStep }, time, "N", "msec")
 
         if (out != null) {
             val file = File(out)
