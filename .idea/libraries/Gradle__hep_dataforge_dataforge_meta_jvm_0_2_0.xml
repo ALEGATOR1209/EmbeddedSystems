@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: hep.dataforge:dataforge-meta-jvm:0.2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/hep.dataforge/dataforge-meta-jvm/0.2.0/c247c52e85e7ddec7182a49f34082e7467d2fd24/dataforge-meta-jvm-0.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/hep.dataforge/dataforge-meta-jvm/0.2.0/c621cd67307da46cb935a5b8a18e839818901949/dataforge-meta-jvm-0.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
