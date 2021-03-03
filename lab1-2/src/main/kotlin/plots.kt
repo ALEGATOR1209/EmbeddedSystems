@@ -24,8 +24,10 @@ private fun plotCorrelation(
         s1.correlation(s2 tau i, normed)
     }
 
-    Plot("tau", name).apply {
-        addLine(correlations.indices.map { it + tauMin }, correlations, color, name)
+    Plot("t", name).apply {
+        addLine(s1.x, s1.y, Xkcd.BLUE, "s1")
+        addLine(s2.x, s2.y, Xkcd.RED, "s2")
+        addLine(correlations.indices.map { it + tauMin }, correlations, color, name, 4)
     }.draw()
 
     val csv = buildString {
@@ -60,7 +62,7 @@ fun plotCloneCorrelation(
 ) {
     val s1 = Signal(n, wMax, num)
     val s2 = Signal(n, wMax, num)
-    plotCorrelation(s1, s2, tauMin, tauMax, normed, "cor(s1, s2 + tau)", Xkcd.BLUE, File(out))
+    plotCorrelation(s1, s2, tauMin, tauMax, normed, "cor(s1, s2 + tau)", Xkcd.BLACK, File(out))
 }
 
 private class Plot(
@@ -69,8 +71,8 @@ private class Plot(
 ) {
     private val lines = mutableListOf<Line>()
 
-    fun addLine(x: Iterable<Number>, y: Iterable<Number>, color: String, name: String) {
-        lines += Line(x, y, color, name)
+    fun addLine(x: Iterable<Number>, y: Iterable<Number>, color: String, name: String, size: Int = 2) {
+        lines += Line(x, y, color, name, size)
     }
 
     fun draw() {
@@ -80,7 +82,10 @@ private class Plot(
                     scatter {
                         x.set(line.x)
                         y.set(line.y)
-                        line { color(line.color) }
+                        line {
+                            color(line.color)
+                            width = line.size
+                        }
                         name = line.name
                     }
                 }
@@ -109,5 +114,6 @@ private class Plot(
         val y: Iterable<Number>,
         val color: String,
         val name: String,
+        val size: Int = 2,
     )
 }
