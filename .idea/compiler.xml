@@ -5,9 +5,6 @@
       <module name="embedded-labs" target="15" />
       <module name="embedded-labs.main" target="15" />
       <module name="embedded-labs.test" target="15" />
-      <module name="lab1-1" target="15" />
-      <module name="lab1-1.main" target="15" />
-      <module name="lab1-1.test" target="15" />
     </bytecodeTargetLevel>
   </component>
 </project>
